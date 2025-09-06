@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0a0a0f; 
+  color: #e0e0e0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 20px 0;
+  color: #ffffff;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #4cafef; 
+}
+
+p {
+  margin: 8px 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #b5b5b5;
+  transition: transform 0.2s ease;
+}
+
+p:hover {
+  transform: scale(1.02);
+}
+
+form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: slideUp 0.8s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+.guessField {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #fff;
+  outline: none;
+  width: 200px;
+  text-align: center;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guessField:focus {
+  border: 1px solid #4cafef;
+  box-shadow: 0 0 6px rgba(76, 175, 239, 0.6);
+}
+
+.guessSubmit {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4cafef;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.guessSubmit:hover {
+  background-color: #2196f3;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.guessSubmit:active {
+  transform: scale(0.95);
+}
+
+.resultParas {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #161616;
+  width: 320px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.resultParas p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.resultParas p:hover {
+  color: #4cafef;
+}
+
+.lowOrHi {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #4cafef;
+}
